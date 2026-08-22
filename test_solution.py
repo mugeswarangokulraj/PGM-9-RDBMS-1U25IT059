@@ -1,7 +1,7 @@
 import mysql.connector
 import subprocess
 import re
-import sys
+import sys 
 
 DB_CONFIG = {
     "host": "127.0.0.1",
