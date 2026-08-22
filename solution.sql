@@ -1,4 +1,10 @@
+
+CREATE DATABASE IF NOT EXISTS CollegeDB;
+
 USE CollegeDB;
+
+DROP TABLE IF EXISTS Student;
+DROP TABLE IF EXISTS Department;
 
 CREATE TABLE Department (
     DepartmentID INT PRIMARY KEY,
@@ -25,9 +31,7 @@ VALUES
 (1003, 'Karthik', 101),
 (1004, 'Nisha', 103);
 
-SELECT Student.StudentID,
-       Student.StudentName,
-       Department.DepartmentName
+SELECT Student.StudentID, Student.StudentName, Department.DepartmentName
 FROM Student
 INNER JOIN Department
 ON Student.DepartmentID = Department.DepartmentID;
